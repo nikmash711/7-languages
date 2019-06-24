@@ -9,7 +9,7 @@ puts("Nikkie " * 10)
 
 # Prints "this is the sentence x" where x changes from 1 to 10
 (1..10).each { |x| puts "this is the sentence #{x}" }
-# Not sure what |x| is doing?
+# Not sure what |x| is doing? sort of all the .map in JS?
 
 # Guessing Game between 1 and 10:
 random = rand(10)
