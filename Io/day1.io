@@ -18,5 +18,13 @@ By using the slotNames method on Object
 4) What is the difference between = (equals), := (colon equals), and ::= (colon colon equals)? When would you use each one?
 = used for assignments to existing slots (raises exception if the slot doesnt exist) 
 := used to assign a value to an existing slot, or create the slot if it doesnt exist
-::= does the same as :=, but will in addition create a setter for the slot
+::= does the same as :=, but will also create a setter for the slot
 
+Do: 
+1) Execute a file -- can do that by calling io day1.io
+
+1) Execute the code in a slot given its name.
+HelloWorld := Object clone 
+HelloWorld foo := method("Foo foo" println)
+ 
+HelloWorld getSlot(System args at(1)) call
