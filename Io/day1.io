@@ -12,7 +12,7 @@ Io> true and ""
 Io> true and nil
 ==> false
 
-3) How can you tell what slots a prototype supports?
+3) How can you tell what slots a prototype  upports?
 By using the slotNames method on Object
 
 4) What is the difference between = (equals), := (colon equals), and ::= (colon colon equals)? When would you use each one?
