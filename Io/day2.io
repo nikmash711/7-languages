@@ -37,3 +37,52 @@ myList myAverage := method(
     return(sum / size)
   )
 )
+
+# 5. Write a prototype for a two-dimensional list. The dim(x, y) method should allocate a list of y lists that are x elements long. set(x, y, value) should set a value, and get(x, y) should return that value.
+
+# 6. Bonus: Write a transpose method so that (new_matrix get(y, x)) == matrix get(x, y) on the original list.
+
+# 7. Write the matrix to a file, and read a matrix from a file.
+
+# 8. Write a program that gives you ten tries to guess a random number from 1–100. If you would like, give a hint of “hotter” or “colder” after the first guess.
+
+randomNumber := (Random value( 99 ) + 1) floor;
+
+standardIO := File standardInput;
+ 
+previousGuess := nil;
+ 
+10 repeat(
+ 
+	"Guess number (1..100): " println;
+ 
+	guess := standardIO readLine asNumber;
+ 
+	if(
+		(guess == randomNumber),
+ 
+		break;
+	);
+ 
+	if(
+		previousGuess,
+ 
+		if(
+			((randomNumber - guess) abs()) >= ((randomNumber - previousGuess) abs()),
+			"Getting colder :(" println(),
+			"Getting warmer :)" println()
+		);
+	);
+
+	previousGuess = guess;
+);
+ 
+if(
+	(guess == randomNumber),
+	(
+		"Awesome! Excellent guess!" println;
+	),
+	(
+		"Sorry, better luck next time." println;
+	)
+);
