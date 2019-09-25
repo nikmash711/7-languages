@@ -38,8 +38,8 @@ valid([Head | Tail]) :- fd_all_different(Head), valid(Tail).
              3, 4, _, _],
              Solution).
  
- 
-S = [4,1,2,3,2,3,4,1,1,2,3,4,3,4,1,2]
+# Output:  
+[4,1,2,3,2,3,4,1,1,2,3,4,3,4,1,2]
 
 # We break the 4x4 puzzle down into individual elements, rows,columns, and squares. After that, we just apply some constraints to them: all elements must have a value between 1 and 4 (fd_domain) and the values in each row, column, and square must be different (fd_all_different).
 
